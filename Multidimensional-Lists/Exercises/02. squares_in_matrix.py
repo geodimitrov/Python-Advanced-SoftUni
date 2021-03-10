@@ -1,5 +1,4 @@
 #create the matrix
-
 def create_matrix(rows):
     result = []
     for _ in range(rows):

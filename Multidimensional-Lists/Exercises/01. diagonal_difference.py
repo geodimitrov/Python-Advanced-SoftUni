@@ -1,6 +1,5 @@
 # use functions to break down the code/problem to different parts/steps
 # let's define a func that creates the matrix
-
 def create_matrix(n_lines):
     result = []
     for _ in range(n_lines):
@@ -25,4 +24,3 @@ for i in range(n):
 
 #let's create a func to calc difference between the sums
 print_result(sum_diagonal_one, sum_diagonal_two)
-
