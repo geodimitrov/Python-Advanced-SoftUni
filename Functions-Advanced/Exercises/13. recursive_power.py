@@ -6,6 +6,7 @@ def recursive_power(number, power):
 
 print(recursive_power(2, 5))
 
+
 # Solution 2: simple ^ operation
 def recursive_power(number, power):
     return number ** power

@@ -1,4 +1,3 @@
-
 def age_assignment(*names, **kwargs):
     name_age_data = kwargs
     names_ages = {}

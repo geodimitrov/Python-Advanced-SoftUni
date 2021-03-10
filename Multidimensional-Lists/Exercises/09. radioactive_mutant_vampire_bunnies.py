@@ -58,7 +58,7 @@ def print_won_game(matrix, row, col):
     print(f"won: {row} {col}")
 
 def move_player(matrix, row, col):
-
+    pass
 
 
 def play_game(commands, matrix, player_position, rows, columns):
