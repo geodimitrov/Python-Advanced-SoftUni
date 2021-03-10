@@ -18,5 +18,3 @@ while clothes:
         sum_values = cloth_value
 
 print(counter)
-
-

@@ -30,6 +30,3 @@ for i in range(len(pump_data)):
         break
 
 print(pump_index)
-
-
-
