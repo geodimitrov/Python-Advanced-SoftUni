@@ -1,5 +1,4 @@
 #create a func to find num of elements in each set
-
 def find_numbers():
     nums = tuple(map(int, input().split()))
     return nums

@@ -1,4 +1,3 @@
-
 def create_list_names(n_lines):
     names = []
     for _ in range(n_lines):

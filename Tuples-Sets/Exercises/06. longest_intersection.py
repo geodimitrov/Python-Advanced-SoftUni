@@ -28,6 +28,3 @@ longest_intersection = find_longest_intersec(intersections)
 
 print(f"Longest intersection is {longest_intersection} with length \
 {len(longest_intersection)}")
-
-
-

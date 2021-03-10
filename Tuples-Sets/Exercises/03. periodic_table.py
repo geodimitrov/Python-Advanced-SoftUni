@@ -1,9 +1,9 @@
 def create_set_elements(count):
-    list = []
+    elements = []
     for _ in range(count):
         for el in input().split():
-            list.append(el)
-    return set(list)
+            elements.append(el)
+    return set(elements)
 
 def print_result(set):
     for el in set:

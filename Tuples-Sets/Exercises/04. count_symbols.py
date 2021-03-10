@@ -16,5 +16,3 @@ def print_result(symbol_occur):
 symbols = tuple(map(str, input()))
 symbols_count = symbol_occurrences(symbols)
 print_result(symbols_count)
-
-
