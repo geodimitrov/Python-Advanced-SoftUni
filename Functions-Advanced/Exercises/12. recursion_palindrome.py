@@ -1,16 +1,17 @@
-# def palindrome(word, length):
-#     if
-#
-#
-#
-# print(palindrome("abcba", 0))
-# print(palindrome("peter", 0))
-#
-#
-# # def factorial(n):
-# #     if n == 0 or n == 1:
-# #         return 1
-# #     else:
-# #         return n * factorial(n - 1)
-# #
-# # print(factorial(5))
+def palindrome(word, index=0, reversed_word=""):
+
+    if index == len(word):
+
+        if not reversed_word == word:
+            return f"{word} is not a palindrome"
+
+        return f"{word} is a palindrome"
+
+    else:
+        reversed_word += word[-(index + 1)]
+        return palindrome(word, index + 1, reversed_word)
+
+
+print(palindrome("abcba"))
+print(palindrome("peter"))
+print(palindrome("ByyB"))
