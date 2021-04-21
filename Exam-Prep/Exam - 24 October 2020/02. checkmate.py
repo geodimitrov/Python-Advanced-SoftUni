@@ -1,7 +1,6 @@
 QUEEN = "Q"
 KING = "K"
 
-
 def read_board(lines):
     result = []
     for line in range(lines):
@@ -54,8 +53,7 @@ def print_result(queens):
     else:
         print("The king is safe!")
 
-
-board = read_board(lines=8)
+board = read_board(8)
 king_position = find_king_position(board, KING)
 queens = find_capturing_queens(king_position, board, QUEEN)
 print_result(queens)

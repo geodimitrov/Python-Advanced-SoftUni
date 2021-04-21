@@ -13,7 +13,6 @@ def insert_bombs(result, bombs):
 
     return result
 
-
 def create_matrix():
     size = int(input())
     bombs = int(input())
@@ -41,14 +40,8 @@ def search_for_bombs(matrix, row, col, delta, BOMB):
 
 def play_game(matrix, BOMB):
     deltas = [
-        (0, -1),
-        (-1, -1),
-        (-1, 0),
-        (-1, +1),
-        (0, +1),
-        (+1, +1),
-        (+1, 0),
-        (+1, -1)
+        (0, -1), (-1, -1), (-1, 0), (-1, +1),
+        (0, +1), (+1, +1), (+1, 0), (+1, -1)
     ]
 
     for row in range(len(matrix)):
@@ -57,7 +50,6 @@ def play_game(matrix, BOMB):
                 [search_for_bombs(matrix, row, col, delta, BOMB) for delta in deltas]
 
     return matrix
-
 
 def print_result(matrix):
     for row in matrix:
