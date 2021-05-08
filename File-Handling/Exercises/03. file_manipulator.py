@@ -1,3 +1,6 @@
+from os import remove
+
+
 def read_input():
     result = []
     while True:
@@ -9,26 +12,34 @@ def read_input():
 
     return result
 
+
 def create_new_file(file_name):
     file = open(file_name, "w")
     file.close()
 
+
 def add_line_to_file(file_name, text_line):
     with open(file_name, "a") as file:
-        file.write(f"{text_line}\n")
+        file.write(text_line + "\n")
 
 
 def replace_old_with_new_str(file_name, old_string, new_string):
     try:
-        with open(file_name) as file:
-            new_text = ""
-            for line in file.readlines():
-                if old_string in line:
-                    line = line.replace(old_string, new_string)
-                    new_text += line + "\n"
-
+        with open(file_name, "r+") as file:
+            text = file.readlines()
+            redacted_text = [el.replace(old_string, new_string) for el in text]
+            file.seek(0)
+            file.truncate(0)
+            file.write("".join(redacted_text))
 
     except FileNotFoundError:
+        print("An error occurred")
+
+
+def delete_file(file_name):
+    try:
+        remove(file_name)
+    except:
         print("An error occurred")
 
 
@@ -48,6 +59,6 @@ for command in commands:
         file_name, old_string, new_string = command.split("-")[1:]
         replace_old_with_new_str(file_name, old_string, new_string)
 
-
     else:
-        pass
+        file_name = command.split("-")[1]
+        delete_file(file_name)
